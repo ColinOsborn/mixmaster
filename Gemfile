@@ -31,6 +31,9 @@ gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'factory_girl_rails'
+gem 'database_cleaner'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do

@@ -1,18 +1,23 @@
+<div class="container">
+  <div class="jumbotron">
 
-<%= form_for(@artist) do |f| %>
-  <% if @artist.errors.any? %>
+    <%= form_for(@artist) do |f| %>
+    <% if @artist.errors.any? %>
     <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this record from being saved:</h2>
     <ul>
       <% @artist.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
     </ul>
     <% end %>
-    
-  <%= f.label :name %>
-  <%= f.text_field :name %>
 
-  <%= f.label :image_path %>
-  <%= f.text_field :image_path %>
-  <%= f.submit "Create Artist" %>
-<% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :image_path %>
+    <%= f.text_field :image_path %>
+    <%= f.submit "Create Artist" %>
+    <% end %>
+
+  </div>
+</div>

@@ -1,2 +1,10 @@
-<h1><%= @artist.name %></h1>
-<%= image_tag @artist.image_path %>
+<div class="containers">
+  <div class="jumbotron">
+
+    <h1><%= @artist.name %></h1>
+    <%= image_tag @artist.image_path %>
+
+    <%= link_to "All Artists", artists_path %>
+    <%= link_to "Delete Artist", artist_path(@artist), method: :delete %>
+  </div>
+</div>

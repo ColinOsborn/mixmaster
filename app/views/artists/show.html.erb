@@ -1,10 +1,13 @@
 <div class="containers">
   <div class="jumbotron">
 
-    <h1><%= @artist.name %></h1>
-    <%= image_tag @artist.image_path %>
+    <div class="text-center img">
+      <h1><%= @artist.name %></h1>
+      <%= image_tag @artist.image_path %>
+    </div>
 
-    <%= link_to "All Artists", artists_path %>
-    <%= link_to "Delete Artist", artist_path(@artist), method: :delete %>
   </div>
+  <nav class="navbar navbar-default text-center">
+    <h4><%= link_to "All Artists", artists_path %> - <%= link_to "Delete Artist", artist_path(@artist), method: :delete  %></h4>
+  </nav>
 </div>

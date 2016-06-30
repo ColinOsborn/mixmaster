@@ -29,6 +29,20 @@ class ArtistsController < ApplicationController
     flash[:notice] = "Artist deleted"
   end
 
+  def edit
+    @artist = Artist.find(params[:id])
+  end
+
+  def update
+    @artist = Artist.find(params[:id])
+    if @artist.update(artist_params)
+      redirect_to artist_path
+      flash[:notice] = "Artist Updated"
+    else
+      render :edit
+    end
+  end
+
   private
 
   def artist_params

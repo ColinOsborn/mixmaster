@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1><%= @playlist.name %></h1>
+
+    <ul>
+      <% @playlist.songs.each do |song| %>
+        <li><%= link_to song.title, song %></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
